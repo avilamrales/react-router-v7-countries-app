@@ -24,10 +24,7 @@ export default function Navbar() {
             >
               Countries
             </NavLink>
-            <NavLink
-              to="/about"
-              className="mr-5 font-medium hover:text-slate-300"
-            >
+            <NavLink to="/about" className="font-medium hover:text-slate-300">
               About
             </NavLink>
           </nav>
