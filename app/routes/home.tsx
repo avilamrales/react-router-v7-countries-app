@@ -22,7 +22,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="mx-auto text-base text-slate-300 sm:max-w-md lg:text-xl">
-                Discover details about every country around the world – from
+                Discover details about every country around the world - from
                 capitals to regions!
               </p>
               <div className="flex flex-col sm:flex-row sm:space-x-4">

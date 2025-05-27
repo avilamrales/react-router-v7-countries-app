@@ -8,6 +8,13 @@ export async function clientLoader() {
   return data;
 }
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Countries Explorer | All Countries" },
+    { name: "description", content: "Explore all countries in the world." },
+  ];
+}
+
 export default function Countries({ loaderData }: Route.ComponentProps) {
   const [search, setSearch] = useState<string>("");
   const [region, setRegion] = useState<string>("");

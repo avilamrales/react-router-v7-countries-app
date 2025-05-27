@@ -10,6 +10,13 @@ export async function clientLoader({ params }: Route.LoaderArgs) {
   return data;
 }
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Countries Explorer | Country Details" },
+    { name: "description", content: "Learn more about this country." },
+  ];
+}
+
 export default function Country({ loaderData }: Route.ComponentProps) {
   const country = {
     name: loaderData[0]?.name?.common || "N/A",
