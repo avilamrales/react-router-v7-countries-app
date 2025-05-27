@@ -47,19 +47,16 @@ export default function Countries({ loaderData }: Route.ComponentProps) {
       </div>
 
       {filteredCountries.length === 0 ? (
-        <div> No countries match your filters.</div>
+        <div>No countries match your filters.</div>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredCountries.map((country: any) => (
             <li
               key={country.cca3}
-              className="border border-slate-200 rounded-xl p-4 shadow hover:shadow-lg transition"
+              className="border border-slate-200 hover:border-slate-400 rounded-xl p-4 shadow hover:shadow-lg transition"
             >
               <Link
-                to={`/countries/${country.name.common
-                  .toLowerCase()
-                  .replace(/[^\w\s-]/g, "")
-                  .replace(/\s+/g, "-")}`}
+                to={`/countries/${country.name.common}`}
                 className="text-sky-500 hover:underline text-lg font-semibold"
               >
                 {country.name.common}
